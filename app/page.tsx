@@ -1,8 +1,14 @@
-import Heading from "@/components/Heading";
+import OpeningSection from "@/components/OpeningSection";
+import SecondSection from "@/components/SecondSection";
+import TestimonialCarousel from "@/components/Testimonials";
 
 
 export default function Home() {
   return (
-    <Heading />
+    <>
+      <OpeningSection />
+      <SecondSection />
+      <TestimonialCarousel />
+    </>
   );
 }
