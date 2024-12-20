@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import FourthSection from "@/components/FourthSection";
 import OpeningSection from "@/components/OpeningSection";
 import SecondSection from "@/components/SecondSection";
@@ -13,6 +14,7 @@ export default function Home() {
       <TestimonialCarousel />
       <ThirdSection />
       <FourthSection />
+      <Footer />
     </>
   );
 }

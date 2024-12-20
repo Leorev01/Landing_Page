@@ -1,35 +1,51 @@
+import SalesButton from "./SalesButton"
+import Stats from "./Stats"
+
 const stats = [
     {
-        title: 'Proven Strategies for Your Niche',
-        description: 'We leverage time-tested design and development methods tailored to your industry, ensuring your website not only looks great but also drives results.'
+        title: 'Proven Strategies for Success',
+        description: 'We leverage the latest web development techniques and best practices to create websites that attract and convert your ideal clients.'
     },
     {
-        title: 'Fully Managed Process',
-        description: 'Our team handles everything from brainstorming to launch. No tech skills? No problem. You focus on your business while we build your online presence.'
+        title: 'Dedicated Human Support Team',
+        description: 'Our trained professionals ensure that every project is handled with care, answering all your questions promptly and providing the support you need throughout the development process.'
     },
     {
-        title: 'Optimized for Conversions',
-        description: 'We don’t just design pretty pages. Every website we build is optimized to turn visitors into paying customers, helping you grow your revenue.'
+        title: 'Customized Solutions',
+        description: 'We offer tailored web development services that meet your specific business needs, so you get a website that truly reflects your brand and engages your audience.'
     },
     {
-        title: 'No Surprise Costs',
-        description: `No upfront design fees: Pay after your website is live.
-        No hidden charges: Transparent pricing, always.`
+        title: 'No Upfront Costs',
+        description: 'You can get started with our services without any upfront fees, making it easier for you to invest in your online presence.'
     },
     {
-        title: 'Results Before You Pay',
-        description: 'You only pay for results. Launch your site, see the impact, and then settle the cost.' 
+        title: 'Transparent Pricing',
+        description: 'We provide clear and fair pricing structures, so you know exactly what you’re paying for without hidden costs or surprises.' 
     },
     {
-        title: 'Dedicated Support Team',
-        description: 'Our team is available 24/7 to assist you, ensuring a smooth process from the first draft to the final launch.'
-    }
+        title: '30-Day Satisfaction Guarantee:',
+        description: `Experience our services risk-free for 30 days. If you're not completely satisfied, we’ll work with you to make it right or help you find a solution.`
+    },
+    {
+        title: 'Quick Turnaround Time',
+        description: 'We value your time and work efficiently to deliver high-quality websites within your deadlines, so you can launch your online presence as soon as possible.'
+    },
 ]
 
 const FourthSection = () => {
   return (
-    <div>
-        <h2 className='text-4xl font-bold text-white'>Why Slick Site is the Perfect Partner for Your Business Website Needs</h2>
+    <div className="py-10 flex flex-col items-center">
+        <h2 className='text-4xl font-bold text-white text-center'>Why Slick Site is the Perfect Partner for Your Business Website Needs</h2>
+        <div className="grid mx-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
+            {stats.map((stat, index) => (
+                <div key={index} className='bg-white p-6 rounded-lg'>
+                    <h3 className='text-2xl font-bold'>✅ {stat.title}</h3>
+                    <p className='mt-4'>{stat.description}</p>
+                </div>
+            ))}
+        </div>
+        <SalesButton />
+        <Stats />
     </div>
   )
 }

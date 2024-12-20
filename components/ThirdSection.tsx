@@ -24,7 +24,7 @@ const slick = [
 
 const ThirdSection = () => {
   return (
-    <div className='bg-[#D90429] flex flex-col items-center py-8 mx-4'>
+    <div className='bg-[#D90429] flex flex-col items-center py-8 sm:mx-4 mx-2 '>
         <h3 className='text-xl w-[95%] bg-black font-bold text-white text-center'>why choose Slick Site?</h3>
         <p className='text-white text-2xl font-bold'>Us vs Other Agencies...</p>
 

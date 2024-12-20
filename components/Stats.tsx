@@ -13,7 +13,7 @@ const Stats = () => {
                     <circle cx="50" cy="50" r="48" fill="#28a745" />
                     <path d="M40 65 L30 50 L35 45 L40 55 L65 30 L70 35 Z" fill="#fff" />
                 </svg>
-                <h2>{stat}</h2>
+                <h2 className="text-lg font-bold">{stat}</h2>
             </div>
         ))}
     </div>
