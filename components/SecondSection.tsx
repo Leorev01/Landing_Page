@@ -21,7 +21,7 @@ const SecondSection = () => {
         <div className='flex flex-col items-start w-full mt-5'>            
             <h3 className='text-3xl self-center'>What we deliver:</h3>
             {stats.map((stat, index) => (
-                <h2 className='text-xl mx-10' key={index}>✅ {stat}</h2>
+                <h2 className='text-lg mx-10' key={index}>✅ {stat}</h2>
             ))}
             <div className='mx-10 mt-5 text-xl'>
                 <p>

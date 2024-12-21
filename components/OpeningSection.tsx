@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import logo from '../public/images/SlickSite3.png'
 import SalesButton from './SalesButton'
 import Stats from './Stats'
 //import Video from 'next-video'
@@ -9,7 +10,7 @@ const OpeningSection = () => {
   return (
     <div className='flex flex-col items-center'>
     <div className='flex justify-center h-20 w-full'>
-        <Image src="/logo.png" alt="logo" width={50} height={50} />
+        <Image src={logo} alt="logo" width={220} height={250} />
     </div>
     <div className='h-1 w-[100%] bg-[#D90429]'></div>
     <div className='flex flex-col items-center w-full pt-20 text-4xl text-center text-[#EDF2F4]'>

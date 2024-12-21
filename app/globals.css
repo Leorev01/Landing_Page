@@ -17,5 +17,15 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto), sans-serif;
+}
+
+/* Headings (H1, H2, H3, etc.) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+/* Paragraphs */
+p {
+  font-family: var(--font-roboto), sans-serif;
 }
