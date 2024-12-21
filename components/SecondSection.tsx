@@ -12,7 +12,7 @@ const stats = [
 
 const SecondSection = () => {
   return (
-    <div className='bg-[#8D99AE] text-[#2B2D42] mt-10 pt-10 flex flex-col items-center'>
+    <div className='bg-[#8D99AE] text-[#2B2D42] mt-10 py-10 flex flex-col items-center'>
         <div className='flex flex-col items-start ml-10'>
             <h3 className='font-extrabold capitalize'>Take Your Online Presence to the Next Level</h3>
             <h2 className='text-2xl'>With <strong>expertly crafted websites</strong> and a <strong>proven system for delivering results</strong>, we help businesses like yours thrive online.</h2>
