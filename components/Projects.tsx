@@ -37,64 +37,35 @@ const Projects = () => {
         <h2 className="text-4xl font-bold text-[#EDF2F4] mb-4">Our Work</h2>
       </div>
 
-      <div className="overflow-hidden">
-        {/* Carousel Wrapper */}
-        <motion.div
-          className="flex space-x-8"
-          animate={{
-            x: ["0%", "-100%"], // Scroll to the left by 100%
-          }}
-          transition={{
-            x: {
-              repeat: Infinity,  // Infinite loop
-              repeatType: "loop",
-              duration: 20,  // Adjust this to control the scroll speed
-              ease: "linear",  // Smooth scrolling
-            },
-          }}
-        >
-          {projects.map((project) => (
-            <motion.div
-              key={project.id}
-              className="flex-shrink-0 bg-gray-300 rounded-lg shadow-md overflow-hidden"
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Display projects in a grid */}
+        {projects.map((project) => (
+          <motion.div
+            key={project.id}
+            className="flex-shrink-0 bg-gray-300 rounded-lg shadow-md overflow-hidden"
+            style={{
+              width: '100%', // Make sure it spans full width of the grid item
+              height: '300px', // Set fixed height for all the images
+              overflow: 'hidden', // Ensure only the top part is visible initially
+            }}
+          >
+            <motion.img
+              src={project.imageUrl}
+              alt={`Project ${project.id}`}
+              className="w-full h-full object-cover transition-all duration-[2000ms]"
               style={{
-                width: '300px', // Set fixed width for the carousel container
-                height: '300px', // Set fixed height for the image container (same for all)
-                overflow: 'hidden', // Ensure only the top part is visible initially
+                objectPosition: 'top', // Align the image to the top initially
               }}
-            >
-              <motion.img
-                src={project.imageUrl}
-                alt={`Project ${project.id}`}
-                className="w-full h-full object-cover transition-all duration-[2000ms]"
-                style={{
-                  objectPosition: 'top', // Align the image to the top initially
-                }}
-                whileHover={{
-                  objectPosition: 'bottom', // Move the image to show the bottom part on hover
-                }}
-              />
-            </motion.div>
-          ))}
-          {/* Duplicate the images to create a seamless loop */}
-          {projects.map((project) => (
-            <motion.div
-              key={`duplicate-${project.id}`}
-              className="flex-shrink-0 bg-gray-300 rounded-lg shadow-md"
-              style={{
-                width: '300px',
-                height: '300px',
-                overflow: 'hidden', // Ensure the duplicated images are hidden in the container
+              whileHover={{
+                objectPosition: 'bottom', // Move the image to show the bottom part on hover
+                transition: {
+                  duration: 2, // Slower hover transition (2 seconds)
+                  ease: "easeInOut", // Smooth easing
+                },
               }}
-            >
-              <img
-                src={project.imageUrl}
-                alt={`Project ${project.id}`}
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+            />
+          </motion.div>
+        ))}
       </div>
     </div>
   )

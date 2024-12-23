@@ -12,8 +12,8 @@ export default function Home() {
     <>
       <OpeningSection />
       <SecondSection />
-      <TestimonialCarousel />
       <Projects />
+      <TestimonialCarousel />
       <ThirdSection />
       <FourthSection />
       <Footer />

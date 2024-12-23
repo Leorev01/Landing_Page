@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from "react";
+import SalesButton from "./SalesButton";
 
 const testimonials = [
   {
@@ -52,8 +53,9 @@ const TestimonialCarousel = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))} 
       </div>
+      <SalesButton />
     </div>
   );
 };
