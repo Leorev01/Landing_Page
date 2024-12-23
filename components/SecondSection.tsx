@@ -1,12 +1,16 @@
 import React from 'react'
 import SalesButton from './SalesButton'
 import Stats from './Stats'
+import Image from 'next/image'
+import image1 from '../public/images/texts/text1.png'
+import image2 from '../public/images/texts/text2.png'
+import image3 from '../public/images/texts/text3.png'
 
 const stats = [
     'Custom-built websites designed to convert visitors into customers.',
     'Mobile-optimized designs for seamless performance on any device.',
-    'Lightning-fast loading speeds to keep users engaged.',
-    'Integrated SEO strategies to drive more traffic to your business.',
+    `Your customers won't wait—get more conversions with fast-loading pages.`,
+    'Dominate search engines and attract more traffic effortlessly.',
     'Ongoing support to ensure your website stays ahead of the competition.',
 ]
 
@@ -17,7 +21,11 @@ const SecondSection = () => {
             <h3 className='font-extrabold capitalize'>Take Your Online Presence to the Next Level</h3>
             <h2 className='text-2xl'>With <strong>expertly crafted websites</strong> and a <strong>proven system for delivering results</strong>, we help businesses like yours thrive online.</h2>
         </div>
-        <div className='w-[600px] h-[400px] bg-[#EDF2F4] shadow-[0_5px_30px_5px_rgba(0,0,0,0.9)] shadow-red-600 mt-5'>This will be a video</div>
+        <div className='flex flex-row items-center justify-around w-full mt-5'>
+            <Image src={image1}  alt="text chat 1" width={300} height={300} className='rounded-lg'/>
+            <Image src={image2}  alt="text chat 2" width={400} height={400} className='rounded-lg'/>
+            <Image src={image3}  alt="text chat 3" width={300} height={300} className='rounded-lg'/>
+        </div>
         <div className='flex flex-col items-start w-full mt-5'>            
             <h3 className='text-3xl self-center'>What we deliver:</h3>
             {stats.map((stat, index) => (

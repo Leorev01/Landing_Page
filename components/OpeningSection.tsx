@@ -27,7 +27,7 @@ const OpeningSection = () => {
 
       <div className="flex flex-col items-center w-full pt-20 text-4xl text-center text-[#EDF2F4] z-10">
         <h3 className="w-[95%] bg-[#8D99AE] text-2xl italic font-bold text-black">UK BUSINESS OWNERS</h3>
-        <h1>Stop paying for expensive <span className="italic">&quot;websites&quot;</span> that produce no results</h1>
+        <h1><strong>Transform Your Business with a High-Converting Website – No Upfront Costs!</strong></h1>
         <p className="text-3xl">Get a website that gets you <strong>more leads</strong> and <strong>more sales</strong></p>
       </div>
 
