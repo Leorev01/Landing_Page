@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Slick Site",
-  description: "Best website builder for UK business owners",
+  description: "Boost your online presence with our expert web development services.",
 };
 
 export default function RootLayout({
@@ -23,12 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
       <div
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#EDF2F4] min-h-[100vh]`}
       >
         {children}
       </div>
-    </html>
   );
 }
