@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
 
   const mailOptions = {
     from: process.env.EMAIL_USER, // sender address
-    to: process.env.NOTIFY_EMAIL, // receiver address (your email)
+    to: process.env.EMAIL_USER, // receiver address (your email)
     subject: 'New Appointment Scheduled',
     text: `
       You have received a new appointment request:
