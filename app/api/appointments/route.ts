@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import path from 'path';
+import fs from 'fs';
+const logoPath = path.join(process.cwd(), 'public/images/SlickSite3.png');
 
 interface AppointmentRequest {
   name: string;
@@ -43,29 +46,39 @@ export async function POST(req: NextRequest) {
     from: process.env.EMAIL_USER, // sender address
     to: email, // user's email address
     subject: 'Appointment Confirmation',
-    text: `
-      Dear ${name},
+    html: `
+      <div>
+        <img src="cid:logo" alt="Logo" style="width: 200px; height: auto;"/><br>
+        Dear ${name},<br><br>
 
-      Thank you for booking your appointment with us!
+        Thank you for booking your appointment with us!<br><br>
 
-      Here are the details of your appointment:
-      - Date: ${date}
-      - Time: ${time}
+        Here are the details of your appointment:<br>
+        <strong>Date:</strong> ${date}<br>
+        <strong>Time:</strong> ${time}<br><br>
 
-      If you have any questions, feel free to contact us at ${process.env.EMAIL_USER}.
+        If you have any questions, feel free to contact us at ${process.env.EMAIL_USER}.<br><br>
 
-      We look forward to meeting you!
+        We look forward to meeting you!<br><br>
 
-      Best regards,
-      Slick Site Team
+        Best regards,<br>
+        Slick Site Team
+      </div>
     `,
+    attachments: [
+      {
+        filename: 'logo.png', // The file name for the image
+        content: fs.readFileSync(logoPath), // The image content (buffer)
+        cid: 'logo',           // Content ID to reference the image inline
+      },
+    ],
   };
 
   try {
-    // Send email to admin
+    // Send email to admin (without logo)
     await transporter.sendMail(adminMailOptions);
 
-    // Send confirmation email to user
+    // Send confirmation email to user (with logo)
     await transporter.sendMail(userMailOptions);
 
     return NextResponse.json(
