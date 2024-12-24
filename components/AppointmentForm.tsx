@@ -35,8 +35,7 @@ const AppointmentForm: React.FC = () => {
       });
 
       if (response.ok) {
-        // Handle successful submission (for example, redirecting or showing a success message)
-        router.push("/success"); // Redirect to a success page (change to your route)
+        router.push("/success");
       } else {
         setError("Something went wrong. Please try again.");
       }
@@ -49,8 +48,8 @@ const AppointmentForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">
+    <div className="max-w-lg mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800 dark:text-white">
         Book Your Free Consultation
       </h2>
       {error && (
@@ -61,7 +60,7 @@ const AppointmentForm: React.FC = () => {
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name Input */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Full Name
           </label>
           <input
@@ -70,15 +69,15 @@ const AppointmentForm: React.FC = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter your name"
           />
         </div>
 
-        {/* Email Input */}
+        {/* Email & Phone Inputs */}
         <div className="flex flex-row gap-4">
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Email Address
             </label>
             <input
@@ -87,14 +86,13 @@ const AppointmentForm: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-lg border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your email"
             />
           </div>
 
-          {/* Phone Input */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Phone Number
             </label>
             <input
@@ -103,7 +101,7 @@ const AppointmentForm: React.FC = () => {
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
-              className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-2 border rounded-lg border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Enter your phone number"
             />
           </div>
@@ -111,22 +109,22 @@ const AppointmentForm: React.FC = () => {
 
         {/* Message Input */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Message (optional)
           </label>
           <textarea
             id="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Tell us a bit about your project, goals, or any specific needs..."
-            rows={4} // Adjust this for more or fewer lines
+            rows={4}
           />
         </div>
 
         {/* Date Picker */}
         <div>
-          <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="date" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Select Date
           </label>
           <input
@@ -135,13 +133,13 @@ const AppointmentForm: React.FC = () => {
             value={date || ""}
             onChange={(e) => setDate(e.target.value)}
             required
-            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
         {/* Time Picker */}
         <div>
-          <label htmlFor="time" className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="time" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Select Time
           </label>
           <select
@@ -149,7 +147,7 @@ const AppointmentForm: React.FC = () => {
             value={time}
             onChange={(e) => setTime(e.target.value)}
             required
-            className="w-full px-4 py-2 border rounded-lg border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-2 border rounded-lg border-gray-300 dark:border-gray-600 text-gray-800 dark:text-white bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           >
             <option value="">Select a time</option>
             <option value="9:00 AM">9:00 AM</option>
