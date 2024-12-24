@@ -14,8 +14,8 @@ const AppointmentForm: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<boolean>(false);
 
-  // Validate the phone number (US format as an example)
-  const phonePattern = /^\+?1?\d{9,15}$/;
+  // UK phone number pattern (starts with 07 or +44)
+  const phonePattern = /^(?:\+44|0)7\d{9}$/;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   // Check if the form is valid
