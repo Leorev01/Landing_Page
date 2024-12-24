@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from "react";
-import SalesButton from "./SalesButton";
 
 const testimonials = [
   {
@@ -31,7 +30,7 @@ const TestimonialCarousel = () => {
   return (
     <div className="max-w-4xl mx-auto p-8 text-center">
       <h2 className="text-3xl font-bold mb-8 text-[#EDF2F4]">What Our Clients Say</h2>
-      <div className="relative overflow-hidden h-80">
+      <div className="relative overflow-hidden h-72">
         {/* Testimonial Content */}
         {testimonials.map((testimonial, index) => (
           <div
@@ -55,7 +54,6 @@ const TestimonialCarousel = () => {
           </div>
         ))} 
       </div>
-      <SalesButton />
     </div>
   );
 };

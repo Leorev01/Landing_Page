@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import FourthSection from "@/components/FourthSection";
+import HowItWorks from "@/components/HowItWorks";
 import OpeningSection from "@/components/OpeningSection";
 import Projects from "@/components/Projects";
 import SecondSection from "@/components/SecondSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <SecondSection />
       <Projects />
       <TestimonialCarousel />
+      <HowItWorks />
       <ThirdSection />
       <FourthSection />
       <Footer />
