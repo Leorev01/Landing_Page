@@ -64,11 +64,13 @@ const SecondSection = () => {
           </h2>
         ))}
         <div className="mt-8 text-xl">
-          <p>
-            Schedule your <strong>FREE 15-minute</strong> consultation today to discuss your project and receive a no-obligation strategy tailored to your business.
-          </p>
+          <p className='font-bold'>🚀 Ready to take your business to the next level?</p>
           <p className="mt-5">
-            It’s completely free and risk-free – just click the link below to book your call now!
+          Let&apos;s chat for <strong>15 minutes – absolutely free</strong> – and get a <strong>personalized roadmap</strong> for your business success. <strong>No pressure, no obligation</strong>. Just <strong>expert advice</strong> tailored specifically for you.
+          </p>
+          <p className="mt-5 font-bold">📅 Book your FREE consultation now – limited spots available!</p>
+          <p className="mt-5 mb-2">
+          <strong>This is your chance</strong> to unlock <strong>actionable insights</strong> that can grow your business. <strong>Don’t wait – schedule today</strong>, and let’s make your goals happen!
           </p>
         </div>
       </div>
