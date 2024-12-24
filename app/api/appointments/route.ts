@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
       We look forward to meeting you!
 
       Best regards,
-      Your Company Name
+      Slick Site Team
     `,
   };
 
