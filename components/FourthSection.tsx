@@ -39,8 +39,8 @@ const FourthSection = () => {
         <div className="grid mx-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10">
             {stats.map((stat, index) => (
                 <div key={index} className='bg-white p-6 rounded-lg'>
-                    <h3 className='text-2xl font-bold'>✅ {stat.title}</h3>
-                    <p className='mt-4' dangerouslySetInnerHTML={{ __html: stat.description }} />
+                    <h3 className='text-2xl font-bold text-[#2B2D42]'>✅ {stat.title}</h3>
+                    <p className='mt-4 text-[#2B2D42]' dangerouslySetInnerHTML={{ __html: stat.description }} />
                 </div>
             ))}
         </div>

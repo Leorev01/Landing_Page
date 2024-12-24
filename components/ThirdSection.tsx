@@ -24,21 +24,21 @@ const slick = [
 
 const ThirdSection = () => {
   return (
-    <div className='bg-[#D90429] flex flex-col items-center py-8 sm:mx-4 mx-2 '>
+    <div className='bg-[#D90429] flex flex-col items-center py-8 sm:mx-4 mx-2'>
         <h3 className='text-xl w-[95%] bg-black font-bold text-white text-center'>why choose Slick Site?</h3>
         <p className='text-white text-2xl font-bold'>Us vs Other Agencies...</p>
 
         <div className='flex flex-col lg:flex-row justify-between gap-4 pt-5'>
             <div className='bg-white p-5 rounded-lg mx-4 w-[90vw] lg:w-[40vw] shadow-black shadow-[0_0_20px_0_rgba(0,0,0,0.9)]'>
-                <h3 className='ml-5 mb-3 text-2xl font-bold'>Other Agencies</h3>
+                <h3 className='ml-5 mb-3 text-2xl font-bold text-[#2B2D42]'>Other Agencies</h3>
                 {other.map((item, index) => (
-                    <p key={index} className='ml-5 text-xl my-2'>❌ {item}</p>
+                    <p key={index} className='ml-5 text-xl my-2 text-[#2B2D42]'>❌ {item}</p>
                 ))}
             </div>
             <div className='bg-white p-5 rounded-lg mx-4 w-[90vw] lg:w-[40vw] shadow-black shadow-[0_0_20px_0_rgba(0,0,0,0.9)]'>
-                <h3 className='ml-5 mb-3 text-2xl font-bold'>Slick Site</h3>
+                <h3 className='ml-5 mb-3 text-2xl font-bold text-[#2B2D42]'>Slick Site</h3>
                 {slick.map((item, index) => (
-                    <p key={index} className='ml-5 text-xl my-2'>✅ {item}</p>
+                    <p key={index} className='ml-5 text-xl my-2 text-[#2B2D42]'>✅ {item}</p>
                 ))}
             </div>
         </div>
