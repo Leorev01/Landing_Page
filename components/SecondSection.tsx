@@ -41,8 +41,8 @@ const SecondSection = () => {
             src={image2}
             alt="text chat 2"
             width={400}
-            height={400}
-            className="rounded-lg object-cover w-full max-w-[400px] h-auto"
+            height={300}
+            className="rounded-lg object-cover h-auto"
           />
         </div>
         <div className="flex justify-center">
