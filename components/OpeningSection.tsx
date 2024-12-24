@@ -1,9 +1,7 @@
-import Image from 'next/image'
-import logo from '../public/images/SlickSite3.png'
-import SalesButton from './SalesButton'
-import Stats from './Stats'
-//import Video from 'next-video'
-//import myVideo from '../public/video.mp4'
+import Image from 'next/image';
+import logo from '../public/images/SlickSite3.png';
+import SalesButton from './SalesButton';
+import Stats from './Stats';
 
 const OpeningSection = () => {
   return (
@@ -31,8 +29,17 @@ const OpeningSection = () => {
         <p className="text-3xl">Get a website that gets you <strong>more leads</strong> and <strong>more sales</strong></p>
       </div>
 
-      <div className="w-[600px] h-[400px] bg-[#EDF2F4] shadow-[0_5px_30px_5px_rgba(0,0,0,0.9)] shadow-red-600 mt-3 z-10">
-        This will be a video
+      {/* Video Section */}
+      <div className="w-full max-w-[1000px] h-[auto] mt-3 z-10">
+        <div className="relative pb-[56.25%] w-full h-0 overflow-hidden rounded-lg shadow-[0_5px_30px_5px_rgba(0,0,0,0.9)] shadow-red-600">
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            controls
+          >
+            <source src="/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
 
       <div className="flex flex-col items-center w-full mt-10 text-[#EDF2F4] z-10">
@@ -43,7 +50,7 @@ const OpeningSection = () => {
         <p className="my-5 text-2xl">(Offer ends <strong>January 7th</strong>)</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default OpeningSection;

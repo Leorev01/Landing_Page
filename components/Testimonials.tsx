@@ -30,7 +30,7 @@ const TestimonialCarousel = () => {
   return (
     <div className="max-w-4xl mx-auto p-8 text-center">
       <h2 className="text-3xl font-bold mb-8 text-[#EDF2F4]">What Our Clients Say</h2>
-      <div className="relative overflow-hidden h-72">
+      <div className="relative overflow-hidden h-[500px] md:h-64 rounded-lg">
         {/* Testimonial Content */}
         {testimonials.map((testimonial, index) => (
           <div
