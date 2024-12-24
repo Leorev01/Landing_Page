@@ -1,8 +1,6 @@
-import SalesButton from "./SalesButton";
-
 export default function HowItWorks() {
     return (
-      <section className="bg-[#8D99AE] py-8 my-12 px-6">
+      <section className="bg-[#EDF2F4] py-8 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">
             How It Works: Your Journey to Success Starts Here!
@@ -79,7 +77,6 @@ export default function HowItWorks() {
           </div>
   
           <div className="mt-12">
-            <SalesButton />
           </div>
         </div>
       </section>
